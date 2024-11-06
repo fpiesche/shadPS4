@@ -939,6 +939,9 @@ endif()
 install(TARGETS shadps4 BUNDLE DESTINATION .)
 
 if (ENABLE_QT_GUI AND CMAKE_SYSTEM_NAME STREQUAL "Linux")
-    install(FILES ".github/shadps4.desktop" DESTINATION "share/applications")
-    install(FILES ".github/shadps4.png" DESTINATION "share/icons/hicolor/512x512/apps")
+    install(FILES "dist/net.shadps4.shadps4.desktop" DESTINATION "share/applications")
+    install(FILES "dist/net.shadps4.shadps4.releases.xml" DESTINATION "share/metainfo/releases")
+    install(FILES "dist/net.shadps4.shadps4.metainfo.xml" DESTINATION "share/metainfo")
+    install(FILES ".github/shadps4.png" DESTINATION "share/icons/hicolor/512x512/apps" RENAME "net.shadps4.shadps4.png")
+
 endif()
